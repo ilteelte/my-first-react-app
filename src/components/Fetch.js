@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import ArticleCard from "./ArticleCard";
+import BreweryCart from "./BreweryCart";
 import App from "../App";
 import "./Fetch.css";
 import LikeCounter from "./LikeComponent";
@@ -40,8 +40,8 @@ class Fetch extends Component {
             <p>Brewery type: {brewery.brewery_type}</p>
             <p>State: {brewery.state}</p>
             <p>Postal code: {brewery.postal_code}</p>
-            <p>{brewery.website_url}</p>
             <p>city: {brewery.city}</p>
+            <a href={brewery.website_url} Website></a>
             <LikeCounter />
           </>
         ))}
