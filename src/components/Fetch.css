@@ -1,0 +1,13 @@
+h1 {
+  font-style: italic;
+}
+
+h3 {
+  font-style: bold;
+  color: green;
+}
+
+p {
+  font-style: normal;
+  color: blue;
+}
