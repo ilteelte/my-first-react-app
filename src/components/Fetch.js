@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import ArticleCard from "./ArticleCard";
 import App from "../App";
 import "./Fetch.css";
+import LikeCounter from "./LikeComponent";
 
 class Fetch extends Component {
   state = {
@@ -35,12 +36,13 @@ class Fetch extends Component {
         {this.state.breweries.map(brewery => (
           <>
             <h3>Name: {brewery.name}</h3>
-            <p>Id: {brewery.id}</p>
-            <p>Brewery type: {brewery.type}</p>
+            {/* <p>Id: {brewery.id}</p> */}
+            <p>Brewery type: {brewery.brewery_type}</p>
             <p>State: {brewery.state}</p>
             <p>Postal code: {brewery.postal_code}</p>
-            <p>url: {brewery.website_url}</p>
+            <p>{brewery.website_url}</p>
             <p>city: {brewery.city}</p>
+            <LikeCounter />
           </>
         ))}
       </div>

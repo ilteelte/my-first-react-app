@@ -16,7 +16,6 @@ function App() {
         <p>
           <Fetch />
         </p>
-        <LikeCounter />
         <a
           className="App-link"
           href="https://reactjs.org"
