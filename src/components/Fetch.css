@@ -4,10 +4,10 @@ h1 {
 
 h3 {
   font-style: bold;
-  color: green;
+  /* color: green; */
 }
 
 p {
   font-style: normal;
-  color: blue;
+  /* color: blue; */
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "./logo.svg";
+// import logo from "./logo.svg";
 import "./App.css";
 import Title from "./components/Title";
 import LikeCounter from "./components/LikeComponent";
@@ -9,10 +9,10 @@ function App() {
   return (
     <div className="App">
       <main>
-        <Title content="Some Simple Title" />
+        <Title content="The best breweries in the world..." />
       </main>
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        {/* <img src={logo} className="App-logo" alt="logo" /> */}
         <p>
           <Fetch />
         </p>
@@ -22,9 +22,7 @@ function App() {
           href="https://reactjs.org"
           target="_blank"
           rel="noopener noreferrer"
-        >
-          Welcome to Codaisseur!!!
-        </a>
+        ></a>
       </header>
     </div>
   );

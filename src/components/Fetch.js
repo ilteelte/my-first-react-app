@@ -7,18 +7,19 @@ class Fetch extends Component {
   state = {
     loading: false,
     article: null,
-    articles: []
+    breweries: []
   };
 
   componentDidMount() {
-    const url = "https://jsonplaceholder.typicode.com/posts?_page=1&_limit=10";
+    // const url = "https://jsonplaceholder.typicode.com/posts?_page=1&_limit=10"; // articles
+    const url = "https://api.openbrewerydb.org/breweries";
     fetch(url)
       .then(resp => {
         return resp.json();
       })
       .then(json => {
         console.log("componentDidMount", json);
-        this.setState({ loading: false, articles: json });
+        this.setState({ loading: false, breweries: json });
       });
   }
 
@@ -30,11 +31,16 @@ class Fetch extends Component {
 
     return (
       <div>
-        <h1>App</h1>
-        {this.state.articles.map(article => (
+        {/* <h1>App</h1> */}
+        {this.state.breweries.map(brewery => (
           <>
-            <h3>{article.title}</h3>
-            <p>{article.body}</p>
+            <h3>Name: {brewery.name}</h3>
+            <p>Id: {brewery.id}</p>
+            <p>Brewery type: {brewery.type}</p>
+            <p>State: {brewery.state}</p>
+            <p>Postal code: {brewery.postal_code}</p>
+            <p>url: {brewery.website_url}</p>
+            <p>city: {brewery.city}</p>
           </>
         ))}
       </div>
